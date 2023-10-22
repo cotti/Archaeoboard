@@ -1,0 +1,18 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Archaeoboard.UI"
+        xmlns:h="using:TheArtOfDev.HtmlRenderer.Avalonia"
+        Design.Height="300" Design.Width="300">
+  <Design.PreviewWith>
+    <controls:Panel />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|Panel">
+    <!-- Set Defaults -->
+    <Setter Property="Template">
+      <ControlTemplate>
+        <h:HtmlPanel Text="aasdasdsd"/>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>
