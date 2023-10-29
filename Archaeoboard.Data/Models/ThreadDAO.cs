@@ -1,5 +1,5 @@
 ﻿namespace Archaeoboard.Data.Models;
-public class Thread
+public class ThreadDAO
 {
     public long ThreadID { get; set; }
     public string? Title { get; set; }
@@ -8,5 +8,5 @@ public class Thread
     public string? LastPost { get; set; }
     public string? LastBump { get; set; }
     public long PostAmount { get; set; }
-    public IEnumerable<Post>? Posts { get; set; }
+    public IEnumerable<PostDAO>? Posts { get; set; }
 }

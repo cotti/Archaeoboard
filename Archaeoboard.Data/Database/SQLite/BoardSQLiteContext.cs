@@ -10,8 +10,8 @@ namespace Archaeoboard.Data.Database.SQLite;
 
 public class BoardSQLiteContext : DbContext
 {
-    public DbSet<Models.Thread> Threads { get; set; }
-    public DbSet<Post> Posts { get; set; }
+    public DbSet<Models.ThreadDAO> Threads { get; set; }
+    public DbSet<PostDAO> Posts { get; set; }
     public BoardSQLiteContext(DbContextOptions<BoardSQLiteContext> options) : base(options)
     {
     }

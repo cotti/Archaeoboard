@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Archaeoboard.Data.Database.SQLite.EntityConfiguration;
 
-public class ThreadConfiguration : IEntityTypeConfiguration<Models.Thread>
+public class ThreadConfiguration : IEntityTypeConfiguration<Models.ThreadDAO>
 {
-    public void Configure(EntityTypeBuilder<Models.Thread> builder)
+    public void Configure(EntityTypeBuilder<Models.ThreadDAO> builder)
     {
         builder.ToTable("threads");
         builder.HasKey(f => f.ThreadID).HasName("threadid");

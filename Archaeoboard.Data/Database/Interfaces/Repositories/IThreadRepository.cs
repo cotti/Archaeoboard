@@ -9,9 +9,9 @@ namespace Archaeoboard.Data.Database.Interfaces.Repositories
     public interface IThreadRepository
     {
         Task<long> GetThreadCount();
-        Task<IEnumerable<Models.Thread>> GetThreadsPaged(int amount, int page);
-        Task<IEnumerable<Models.Thread>> GetThreadMatches(string match);
+        Task<IEnumerable<Models.ThreadDAO>> GetThreadsPaged(int amount, int page);
+        Task<IEnumerable<Models.ThreadDAO>> GetThreadMatches(string match);
 
-        Task<Models.Thread> GetThread(long threadId);
+        Task<Models.ThreadDAO> GetThread(long threadId);
     }
 }

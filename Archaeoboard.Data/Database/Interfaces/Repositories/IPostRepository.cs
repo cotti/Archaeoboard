@@ -9,9 +9,9 @@ namespace Archaeoboard.Data.Database.Interfaces.Repositories
 {
     public interface IPostRepository
     {
-        Task<IEnumerable<Post>> GetPosts(Models.Thread thread);
-        Task<Models.Post> GetPost(Models.Thread thread, long postNum);
-        Task<IEnumerable<Models.Post>> FindPosts(string match);
+        Task<IEnumerable<PostDAO>> GetPosts(Models.ThreadDAO thread);
+        Task<Models.PostDAO> GetPost(Models.ThreadDAO thread, long postNum);
+        Task<IEnumerable<Models.PostDAO>> FindPosts(string match);
         Task<bool> SetupIndex();
     }
 }

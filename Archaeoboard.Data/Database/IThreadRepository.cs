@@ -8,7 +8,7 @@ namespace Archaeoboard.Data.Database
 {
     public interface IThreadRepository
     {
-        Task<IEnumerable<Models.Thread>> GetAllThreads();
-        Task<Models.Thread> GetThread(long threadId);
+        Task<IEnumerable<Models.ThreadDAO>> GetAllThreads();
+        Task<Models.ThreadDAO> GetThread(long threadId);
     }
 }

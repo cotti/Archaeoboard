@@ -15,14 +15,14 @@ namespace Archaeoboard.Data.Database.SQLite.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Models.Thread>> GetAllThreads()
+        public async Task<IEnumerable<Models.ThreadDAO>> GetAllThreads()
         {
-            return await _context.Set<Models.Thread>().ToListAsync();
+            return await _context.Set<Models.ThreadDAO>().ToListAsync();
         }
 
-        public async Task<Models.Thread> GetThread(long threadId)
+        public async Task<Models.ThreadDAO> GetThread(long threadId)
         {
-            return await _context.Set<Models.Thread>().Where(x => x.ThreadID == threadId).Include(a => a.Posts).SingleAsync();
+            return await _context.Set<Models.ThreadDAO>().Where(x => x.ThreadID == threadId).Include(a => a.Posts).SingleAsync();
         }
     }
 }

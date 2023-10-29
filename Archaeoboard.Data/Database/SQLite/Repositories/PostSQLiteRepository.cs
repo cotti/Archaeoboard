@@ -18,17 +18,17 @@ public class PostSQLiteRepository : IPostRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Post>> FindPosts(string match)
+    public async Task<IEnumerable<PostDAO>> FindPosts(string match)
     {
-        return await _context.Set<Post>().Where(x => x.PostContent.Contains(match, StringComparison.InvariantCultureIgnoreCase)).Take(10).ToListAsync();
+        return await _context.Set<PostDAO>().Where(x => x.PostContent.Contains(match, StringComparison.InvariantCultureIgnoreCase)).Take(10).ToListAsync();
     }
 
-    public async Task<Post> GetPost(Models.Thread thread, long postNum)
+    public async Task<PostDAO> GetPost(Models.ThreadDAO thread, long postNum)
     {
-        return await _context.Set<Post>().Where(x => x.ThreadID == thread.ThreadID && x.PostNumber == postNum).SingleAsync();
+        return await _context.Set<PostDAO>().Where(x => x.ThreadID == thread.ThreadID && x.PostNumber == postNum).SingleAsync();
     }
 
-    public Task<IEnumerable<Post>> GetPosts(Models.Thread thread)
+    public Task<IEnumerable<PostDAO>> GetPosts(Models.ThreadDAO thread)
     {
         throw new NotImplementedException();
     }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Archaeoboard.Data.Models;
 
-public class Post
+public class PostDAO
 {
-    public Thread? Thread { get; set; }
+    public ThreadDAO? Thread { get; set; }
     public long ThreadID { get; set; }
     public long PostNumber { get; set; }
     public string? PosterName { get; set; }

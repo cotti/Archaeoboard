@@ -25,7 +25,7 @@ namespace Archaeoboard.Data.Test
             using var context = _serviceProvider.GetService<BoardSQLiteContext>();
             var repo = new PostSQLiteRepository(context!);
 
-            var result = await repo.GetPost(new Models.Thread() { ThreadID = 1376617142 }, 9);
+            var result = await repo.GetPost(new Models.ThreadDAO() { ThreadID = 1376617142 }, 9);
 
             Assert.NotNull(result);
             Assert.Equal("It's dark. You are likely to be eaten by a grue.", result.PostContent);

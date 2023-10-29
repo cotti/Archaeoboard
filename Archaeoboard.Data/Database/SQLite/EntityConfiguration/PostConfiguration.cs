@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Archaeoboard.Data.Database.SQLite.EntityConfiguration;
 
-public class PostConfiguration : IEntityTypeConfiguration<Models.Post>
+public class PostConfiguration : IEntityTypeConfiguration<Models.PostDAO>
 {
-    public void Configure(EntityTypeBuilder<Models.Post> builder)
+    public void Configure(EntityTypeBuilder<Models.PostDAO> builder)
     {
         builder.ToTable("posts");
         builder.HasKey(p => new { p.ThreadID, p.PostNumber });
